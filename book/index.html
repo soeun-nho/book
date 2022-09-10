@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>나의 서점 </title>
+        <style>
+            *{
+                box-sizing:border-box; /*하나의 박스로 인식하게 만듦*/ㄴ
+                margin: 0px;
+                padding:0px;
+            }
+            ul {
+                list-style-type: none;
+            }
+            body{
+                font-family: "맑은 고딕", "돋움";
+                font-size: 100%;
+            }
+            .c20{
+                width:20%;
+                float:left;
+                padding:10px;
+            }
+            .c80{
+                width:80%;
+                float:left;
+                padding:10px;
+            }
+            .c100{
+                width:100%;
+                float:left;
+                padding:10px;
+            }
+            header{
+                height: 80px;
+                padding:15px;
+                border:solid 1px #666666;
+                background-color: aliceblue;
+            }
+            nav{
+                color:ffffff;
+                border: solid 1px #666666;
+                border-bottom: 0ch;
+            }
+            nav li{
+                padding:10px;
+                margin:10px;
+                background-color: rgb(133, 133, 221,0.4);
+            }
+            section#intro{
+                padding:15px;
+                border: solid 1px #666666;
+            }
+            section#intro p{
+                padding:10px;
+                font-size: 0.95em;
+                line-height: 150%;
+            }
+            footer{
+                padding: 10px;
+                height: 50px;
+                text-align: center;
+                border: solid 1px #666666;
+                background-color: #eeeeee;
+            }
+        </style>
+    </head>
+    <body>
+       <header class="c100">
+        <h1>bookstore</h1>
+        </header>
+       <nav class="c20">
+        <ul>
+            <li><a href="./recomend.html" target="main_b">책 골라보기</a></li>
+            <li><a href="./mybookshelf.html" target="_main_b">책장 구경하기</a></li>
+            <li><a href="./customer.html" target="main_b">책 구매하러 가기</a></li>
+           
+        </ul>
+       </nav>
+       <section id="intro" class="c80">
+        <iframe src="./mybookshelf.html" width="800" height="400" name="main_a" frameborder="0" style="background-color:#FFFFFF"></iframe>
+        
+        <iframe src="./recomend.html" width="800" height="300" name="main_b" frameborder="0" style="background-color:#FFFFFF"></iframe>
+        
+       </section>
+       <footer class="c100">copywrite(c) 노소은 all rights reserved </footer>
+    </body>
+
+</html>

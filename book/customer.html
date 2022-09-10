@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            ul{
+                list-style: none;
+            }
+            #main{
+                font-family: "맑은 고딕";
+                margin:10px 10px 0 10px;
+                border-bottom: solid 2px #aaaaaa;
+                padding-bottom: 8px;
+            }
+            .item{
+                clear:both;
+                height:200px;
+                margin:10px;
+                border-bottom: solid 1px #aaaaaa;
+            }
+            .img{
+                float:left;
+                border-width:230px;
+            }
+            .menu{
+                float:left;
+                width:350px;
+                margin-left:10px;
+            }
+            .price{
+                float:left;
+                width:150px;
+            }
+            .red{
+                font-weight: bold;
+                color:red;
+            }
+            .small{
+                font-size:12px;
+                margin:5px; 
+            }
+            .choice{
+                float:left;
+                width:100px;
+            }
+            #id{
+                font-family: "맑은 고딕";
+                margin:10px 10px 0 10px;
+                border-bottom: solid 2px #aaaaaa;
+                padding-bottom: 8px;
+            
+            }
+            
+        </style>
+        <script>
+            function calc(cost){
+                var cost; 
+                if(cost==15000){
+                    var x=document.getElementById("howmany1").value; 
+                }
+                if(cost=13000){
+                    var x=document.getElementById("howmany2").value; 
+                }
+                if(cost=14000){
+                    var x=document.getElementById("howmany3").value; 
+                }
+               
+                var result = parseInt(x) * cost +3000;
+                document.getElementById("result").value=result;
+            }
+        </script>
+    </head>
+    <body>
+        <h3 id="main">bestSeller pick!<br/> <pre>한 가지 책만 고를 수 있습니다. * 금액을 알아볼 수 있습니다.</pre></h3>
+
+        <div class="item">
+            <div class="img"><img src="./book1.jpg" 
+                width="230px" height="200px"></div>
+            <div class="menu">천개의 파랑</div>
+            <ul class="price">
+                <li class="red">15,000원</li>
+                <li class="small">배송비 3,000원</li>
+            </ul>
+            <div class="choice">
+                <input type="number" min="1" max="5" step="1"
+            value="0" name="a" id="howmany1">
+            <input type="button" value="계산" onclick="calc(15000)">
+            <br/>
+        </div>
+
+        <div class="item">
+            <div class="img"><img src="./book4.jpeg" 
+                width="230px" height="200px"></div>
+            <div class="menu">우리가 빛의 속도로 갈 수 없다면</div>
+            <ul class="price">
+                <li class="red">13,000원</li>
+                <li class="small">배송비 3,000원</li>
+            </ul>
+            <div class="choice">
+                <input type="number" min="1" max="5" step="1"
+            value="0" name="b" id="howmany2">
+            <input type="button" value="계산" onclick="calc(13000)">
+            <br/>
+            </div>
+        </div>
+                    
+        
+        <div class="item">
+            <div class="img"><img src="./book5.jpg" 
+                width="230px" height="200px"></div>
+            <div class="menu">난쟁이가 쏘아올린 작은 공 </div>
+            <ul class="price">
+                <li class="red">14,000원</li>
+                <li class="small">배송비 3,000원</li>
+            </ul>
+            <div class="choice">
+                <input type="number" min="1" max="5" step="1"
+            value="0" name="b" id="howmany3">
+            <input type="button" value="계산" onclick="calc(14000)">
+            <br/>
+            </div>
+        </div>
+      
+
+        <div id="cost">
+    
+                금액: 
+                <input id="result">
+           
+        </div>
+    </body>
+</html>
+
+<!-- 왜 인라인태그로는 이미지 사이즈 조절이 되고 <style>에서는 안될까-->
